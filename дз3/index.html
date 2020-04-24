@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/bootstrap.css">
+   <link rel="stylesheet" href="main.css">
+   <title>CHANEL</title>
+</head>
+
+<body>
+   <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+         <a href="index.html" class="navbar-brand logo">CHANEL</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto menu flex-wrap">
+               <li class="nav-item active">
+                  <a class="nav-link badge badge-light" href="#">Главная</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link badge badge-light" href="koko.html">Коко Шанель</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link badge badge-light" href="karl.html">Карл Лагерфельд</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle justify-content-center badge badge-light" href="#"
+                     id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
+                     aria-expanded="false">
+                     Дополнительная информация
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <ul class="navbar-nav flex-column">
+                        <li class="nav-item nav-item-dropdown bg-light">
+                           <a class="dropdown-item dropdown" href="#">О бренде</a>
+                           <ul class="submenu">
+                              <li class="submenu-item bg-light"><a
+                                    href="https://www.chanel.com/?gclid=CjwKCAjwnIr1BRAWEiwA6GpwNUuLf9MYyhbhdGxdUn9UWKWnzix1EowUnKxQslP7v0ZYuufeqjYZ8xoCSHEQAvD_BwE/"
+                                    target="_blank">Оффициальный сайт</a></li>
+                              <li class="submenu-item bg-light"><a href="https://ru.wikipedia.org/wiki/Chanel"
+                                    target="_blank">Википедия</a></li>
+                           </ul>
+                        </li>
+                        <li class="nav-item nav-item-dropdown bg-light">
+                           <a class="dropdown-item"
+                              href="https://paris.zagranitsa.com/article/1372/koko-shanel-interesnye-fakty-o-legende-frantsuzsko"
+                              target="_blant">Интересные факты</a>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="back">
+            <button type="button" class="btn btn-primary bg-dark" data-toggle="modal" data-target="#exampleModal">
+               Наши спонсоры
+            </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+               aria-hidden="true">
+               <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Наши спонсоры</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-body">
+                        $$\lim_{x\to 0} \sin x$$
+                        $$\int {x+1\over \sqrt{x^3}}$$
+                        $$\sum_{x=0}^\infty x^2$$
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+   </header>
+   <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item active" aria-current="page">Главная</li>
+      </ol>
+   </nav>
+   <div class="container-fluid">
+      <div class="row text-center alert">
+         <div class="col-12">
+            <h1 class="display-4">История модного дома</h1>
+         </div>
+         <hr>
+         <div class="col-12">
+            <p class="lead">Chanel («Шанель») — французский бренд по производству элегантной одежды, предметов роскоши,
+               парфюмерии и модных аксессуаров. Во всем мире насчитывается более 300 монобрендовых бутиков Chanel. У
+               истоков модного дома стоит хрупкая, но отважная девушка — Габриэ́ль Бонёр (Коко́) Шане́ль, оказавшая
+               существенное влияние на европейскую моду XX века.
+               Именно она сумела разрушить существующие каноны и привнести в мир моды новаторский стиль. Ее приталенный
+               жакет и маленькое чёрное платье совершили настоящую революцию и заставили взглянуть на модные тренды под
+               новым углом. </p>
+         </div>
+      </div>
+   </div>
+   <div class="carousel slide container-fluid" data-ride="carousel" data-interval="3000" id="slides">
+      <ul class="carousel-indicators">
+         <li data-target="#slides" data-slide-to="0" class="active"></li>
+         <li data-target="#slides" data-slide-to="1"></li>
+         <li data-target="#slides" data-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner">
+         <div class="carousel-item active">
+            <img src="img/chanel3.jpg" alt="photo">
+         </div>
+         <div class="carousel-item">
+            <img src="img/chanel2.png" alt="photo">
+         </div>
+         <div class="carousel-item">
+            <img src="img/chanel1.jpg" alt="photo">
+         </div>
+      </div>
+   </div>
+   <div class="legends container-fluid">
+      <h3 class="text-center">Легендарные модельеры</h3>
+      <table class="table table-striped">
+         <thead>
+            <tr>
+               <th scope="col">Фамилия</th>
+               <th scope="col">Года</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Габриэль Бонёр Шанель</td>
+               <td>1910-1970гг.</td>
+            </tr>
+            <tr>
+               <td>Карл Лагерфельд</td>
+               <td>1983-2019гг.</td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+   <ul class="list-unstyled container-fluid">
+      <li class="media my-4">
+         <img src="img/coco.jpg" class="mr-3" alt="..." width="100">
+         <div class="media-body">
+            <h5 class="mt-0 mb-1">Габриэль Бонёр Шанель</h5>
+            "Говорят, что женщины одеваются ради женщин, что их вдохновляет дух соперничества. Это правда. Но если бы на
+            свете больше не осталось мужчин, женщины вообще перестали бы одеваться."
+         </div>
+      </li>
+      <li class="media my-4">
+         <img src="img/karl.jpg" class="mr-3" alt="..." width="100">
+         <div class="media-body">
+            <h5 class="mt-0 mb-1">Карл Лагерфельд</h5>
+            "Желание быть красивой на самом деле очень опасная мотивация. Я считаю, что респектабельного внешнего вида
+            достаточно, чтобы привлечь внимание к своему внутреннему миру и душе".
+         </div>
+      </li>
+   </ul>
+   <hr>
+   <footer class="container-fluid">
+      <div class="container-fluid text-right">
+         <h4>
+            zgurya dasha
+            <i class="far fa-heart"></i>
+         </h4>
+      </div>
+   </footer>
+   <script src="js/jquery.slim.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script>
+      $(function () {
+         $('[data-toggle="tooltip"]').tooltip();
+      });
+   </script>
+   <script src="https://kit.fontawesome.com/77ebd5663e.js" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+   </script>
+</body>
+
+</html>
