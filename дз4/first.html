@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квадрат</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul id="menu">
+        <li><a class="active" href="first.html">Квадрат</a></li>
+        <li><a href="second.html">Последовательность</a></li>
+        <li><a href="third.html">Магический квадрат</a></li>
+        <li><a href="fourth.html">Сортировка</a></li>
+    </ul>
+    <hr>
+
+    <div class="content">
+        <form>
+            <input type="number" id="side" value="0">
+        </form>
+        <button onclick="square();">Результат</button>
+        <span id="answer"></span>
+    </div>
+    <script>
+        function square() {
+            let a = Number(document.getElementById('side').value)
+            if (a <= 0) {
+                document.getElementById('answer').innerHTML = 'Сторона должна быть положительной!'
+                return
+            }
+            let S = a * a
+            document.getElementById('answer').innerHTML = S 
+        }
+    </script>
+</body>
+</html>

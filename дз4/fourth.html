@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сортировка</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        table {
+            border: 1px solid black;
+        }
+        table td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li><a href="first.html">Квадрат</a></li>
+        <li><a href="second.html">Последовательность</a></li>
+        <li><a href="third.html">Магический квадрат</a></li>
+        <li><a class="active" href="fourth.html">Сортировка</a></li>
+    </ul>
+    <hr>
+
+    <div class="content">
+        <form>
+            <span>Размер</span>
+            <input id="count" type="number" value="3">
+            <span>Минимальный</span>
+            <input id="min" type="number" value="1">
+            <span>Максимальный</span>
+            <input id="max" type="number" value="10">
+        </form>
+        <button onclick="result()">Результат</button>
+        <div id="answer">
+
+        </div>
+    </div>
+    <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min
+        }
+
+        function getArray(n, min, max) {
+            let array = []
+            for (let i = 0; i < n; i++) {
+                array[i] = []
+                for (let j = 0; j < n; j++) {
+                    array[i][j] = getRandomInt(min, max)
+                }
+            }
+            return array
+        }
+
+        function getResultArray(array) {
+            let n = array.length
+            // копируем матрицу в одномерный массив
+            let list = []
+            for (let i = 0; i < n; i++) {
+                for (j = 0; j < n; j++) {
+                    list.push(array[i][j])
+                }
+            }
+            // сортирую по убыванию матрицу
+            list.sort((a, b) => b - a)
+
+            for (let i = n - 1; i >= 0; i--) {
+                // tmp - делаю массивом длины n, 
+                // элементы берутся с конца list 
+                // (i * n + n )- (i * n) = n элементов
+                // где (i * n) - начало, (i * n + n) - конец
+                let tmp = []
+                for (let j = i * n; j < i * n + n; j++) {
+                    tmp.push(list[j])
+                }
+                // сортирую tmp, таким образом, что последняя строка
+                // array всегда сортируется по возрастанию
+                // а дальше чередуется
+                tmp.sort((a, b) => (n - i) % 2 ? a - b : b - a)
+                array[i] = tmp
+            }
+            return array
+        }
+
+        function print(array) {
+            let n = array.length
+            let table = document.createElement('table')
+            for (let i = 0; i < n; i++) {
+                let tr = document.createElement('tr')
+                for (let j = 0; j < n; j++) {
+                    let td = document.createElement('td')
+                    let content = document.createTextNode(array[i][j])
+                    td.appendChild(content)
+                    tr.appendChild(td)
+                }
+                table.appendChild(tr)
+            }
+            document.getElementById('answer').appendChild(table)
+        }
+
+        function result() {
+            let n = Math.floor(Number(document.getElementById('count').value))
+            let min = Math.floor(Number(document.getElementById('min').value))
+            let max = Math.floor(Number(document.getElementById('max').value))
+            // очищаем answer
+            document.getElementById('answer').innerHTML = ''
+            // обработка корректности данных
+            if (n <= 0) {
+                document.getElementById('answer').innerHTML = 'Размер должен быть больше 0'
+                return
+            } 
+            if (min >= max) {
+                document.getElementById('answer').innerHTML = 'Минимальный должен быть меньше макcимального'
+                return
+            }
+            // генерируем матрицу
+            array = getArray(n, min, max)
+            // сортируем
+            array = getResultArray(array)
+            // выводим
+            print(array)
+        }
+    </script>
+</body>
+</html>
