@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фигуры</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="init();">
+    <canvas id="canvas" width="1000" height="500" onclick="goInput(event);"></canvas>
+    <form>
+        <input type="button" value="вверх" onclick="move(0);">
+        <input type="button" value="вниз" onclick="move(1);">
+        <input type="button" value="влево" onclick="move(2);">
+        <input type="button" value="вправо" onclick="move(3);">
+        <input type="button" value="рандом" onclick="move();">
+        <input type="button" value="хаос" onclick="move(4);">
+
+        <input type="button" value="быстрее" onclick="changeSpeed(1);">
+        <input type="button" value="медленее" onclick="changeSpeed(-1);">
+        <input type="button" value="стоп" onclick="clearInterval(idTimer);">
+    </form>
+</body>
+</html>
