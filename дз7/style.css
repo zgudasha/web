@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+
+:root {
+    --pink: #e89297;
+    --gray: #e7e7e7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img, h1, span, input, form {
+    user-select: none;
+}
+
+body {
+    font-family: 'Orbitron', 'Jura', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#game {
+    display: contents;
+}
+
+canvas {
+    border: 3px solid var(--pink);
+    margin-bottom: 10px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+}
+
+.lives img {
+    height: 50px;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.name_score {
+    display: flex;
+    flex-direction: row;
+}
+
+#name, #level {
+    background-color: var(--pink);
+    color: #fff;
+    padding: 0 10px;
+    margin-left: 15px;
+}
+
+.score {
+    margin-left: 15px;
+    color: var(--pink);
+}
+
+#forms {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#weapons {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#weapons div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    align-content: center;
+    padding: 0;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#menu input {
+    background-color: var(--pink);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding: 15px;
+}
+
+#weapons input {
+    background-color: var(--pink);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-family: 'Orbitron', sans-serif;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding: 15px;
+}
+
+#weapons span {
+    background-color: #fff;
+    color: var(--pink);
+    padding: 15px;
+    width: 75px;
+}
+
+input[type=button] {
+    transition: ease-in-out 0.3s;
+}
+
+input[type=button]:active {
+    transform: scale(0.9);
+}
+
+#welcome {
+    margin-top: 20%;
+    background-color: var(--gray);
+    padding: 10px;
+    transform: scale(2);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+#welcome input {
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+    padding: 15px;
+    background-color: var(--pink);
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+#welcome #playerName {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.disabled {
+    display: none !important;
+}
+
+#results {
+    margin-top: 12%;
+}
+
+table {
+    width: 100%;
+    border: 1px solid var(--pink);
+}
+
+td {
+    padding: 15px;
+}
+
+#results form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#results input[type=button],
+#results input[type=text] {
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+    padding: 5px 15px;
+    background-color: var(--pink);
+    color: #fff;
+    border: none;
+    outline: none;
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="init();">
+    <form id="welcome">
+        <input type="text" autocomplete="off" id="playerName" placeholder="Name...">
+        <input type="button" value="start" onclick="start();">
+        <input type="button" value="Show table" onclick="drawTable();">
+    </form>
+
+    <div id="results" class="disabled">
+        <form>
+            <input id="continue" type="button" value="continue as " onclick="continueCurrent();">
+            <input id="new" type="button" value="New Game" onclick="newGame();">
+        </form>
+        <table id="table"></table>
+    </div>
+
+    <div id="game" class="disabled">
+        <div class="stats">
+            <div class="lives"></div>
+            <div class="name_score">
+                <h1 id="level">level <span id="level-digit">1</span></h1>
+                <h1 id="name">Name</h1>
+                <h1 class="score">Score: <span id="score">0</span></h1>
+            </div>
+        </div>
+        <canvas id="canvas" height="500" width="1000" onmousemove="mouseMove(event);" onclick="mouseClick(event)"></canvas>
+        <div id="forms">
+            <form id="weapons">
+                <div class="gun">
+                    <input class="guns" id="gun" type="button" value="gun" onclick="changeGun(event)">
+                    <span id="gun-time">OK</span>
+                </div>
+                <div class="chopper">
+                    <input class="guns" id="chopper" type="button" value="chopper" onclick="changeGun(event)">
+                    <span id="chopper-time">OK</span>
+                </div>
+            </form>
+            <form id="menu">
+                <input type="button" value="play" onclick="move();">
+                <input type="button" value="restart" onclick="restart();">
+                <input type="button" value="table" onclick="drawTable();">
+                <input type="button" value="stop" onclick="stop(idTimer);">
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
